@@ -1,0 +1,19 @@
+# ninja log v5
+1	65	6880084052592773	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.pbi	4b61c59e42050bd8
+6	8873	6876608660000000	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.xcl	53697d52156c3df1
+739	10284	6876608680000000	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/system_stm32f4xx.xcl	7ec50642fcad92d7
+10301	10988	6876608690957170	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/system_stm32f4xx.pbi	820a882347064ed4
+72	145	6880084053406506	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbd	5567571120dbb7e5
+154	1567	6880084066389186	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbw	6283d593d7bf96d6
+3	67	6880084170698792	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.pbi	4b61c59e42050bd8
+74	145	6880084171479996	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbd	5567571120dbb7e5
+153	1831	6880084186937464	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbw	6283d593d7bf96d6
+1	81	6880084546112192	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.pbi	4b61c59e42050bd8
+88	154	6880084546893324	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbd	5567571120dbb7e5
+163	1587	6880084560050971	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbw	6283d593d7bf96d6
+1	62	6880084613024595	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.pbi	4b61c59e42050bd8
+69	139	6880084613805855	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbd	5567571120dbb7e5
+148	1495	6880084626417472	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbw	6283d593d7bf96d6
+2	63	6880084678573476	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/User/main.pbi	4b61c59e42050bd8
+70	136	6880084679354763	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbd	5567571120dbb7e5
+145	1510	6880084692048241	E:/Focus_2022/CSF/Les Ressources/Labs/Partie1/Lab2_macro/Project/EWARM/Lab/BrowseInfo/IO_Toggle.pbw	6283d593d7bf96d6

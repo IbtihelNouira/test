@@ -1,0 +1,51 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\main.c" -xcl_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.xcl" -macro_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\main.c" -D USE_STDPERIPH_DRIVER -D STM32F4XX -o "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\Obj\User" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\\" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\..\Libraries\CMSIS\Include\\" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\..\Libraries\CMSIS\ST\STM32F4xx\Include\\" -On --use_c++_inline --predef_macros "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.tmp"
+  rspfile_name = E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.xcl.rsp
+
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\system_stm32f4xx.c" -xcl_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.xcl" -macro_file "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\system_stm32f4xx.c" -D USE_STDPERIPH_DRIVER -D STM32F4XX -o "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\Obj\User" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\\" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\..\Libraries\CMSIS\Include\\" -I "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\..\..\Libraries\CMSIS\ST\STM32F4xx\Include\\" -On --use_c++_inline --predef_macros "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.tmp"
+  rspfile_name = E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.xcl.rsp
+
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.pbi : INDEXER E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.xcl |  $
+E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\main.c
+  flags = "-out=E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.pbi" -f "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.xcl"
+
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.pbi : INDEXER E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.xcl |  $
+E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\system_stm32f4xx.c
+  flags = "-out=E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.pbi" -f "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.xcl"
+
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbw : MAKEBROWSE E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd
+  flags = "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd" -output "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbw"
+
+build E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd : PDBLINK E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.pbi |  $
+E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.pbi
+  flags = -M "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\IO_Toggle.pbd" "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\main.pbi" "E$:\Focus_2022\CSF\Les$ Ressources\Labs\Partie1\Lab1_Variables_Stack_Heap\Project\EWARM\Lab\BrowseInfo\User\system_stm32f4xx.pbi"
+
